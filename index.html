@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
 <head>
 
-   <!--- basic page needs
+	<!--- basic page needs
    ================================================== -->
-   <meta charset="utf-8">
+	<meta charset="utf-8">
 	<title>Shyam Sujith</title>
-	<meta name="description" content="Portfolio website">  
+	<meta name="description" content="Portfolio website">
 	<meta name="author" content="Sujith">
 
-   <!-- mobile specific metas
+	<!-- mobile specific metas
    ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
- 	<!-- CSS
+	<!-- CSS
    ================================================== -->
-   <link rel="stylesheet" href="css/base.css">
-   <link rel="stylesheet" href="css/vendor.css">  
-   <link rel="stylesheet" href="css/main.css">  
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/main.css">
 
-   <!-- script
+	<!-- script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
 	<script src="js/pace.min.js"></script>5
 
-   <!-- favicons
+	<!-- favicons
 	================================================== -->
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -38,60 +41,32 @@
 
 	<!-- header 
    ================================================== -->
-   <header> 
+	<header>
 
-   	<div class="header-logo">
-	    <a href="index.html">Hi</a>
-		
-		<div class="ip-address">
-			<h1></h1>
-			<h1>Your IP address is : 
-			<?php  
-        function getIPAddress() {  
-        //whether ip is from the share internet  
-         if(!empty($_SERVER['HTTP_CLIENT_IP'])) {  
-                    $ip = $_SERVER['HTTP_CLIENT_IP'];  
-            }  
-        //whether ip is from the proxy  
-        elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {  
-                    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];  
-         }  
-    //whether ip is from the remote address  
-        else{  
-                 $ip = $_SERVER['REMOTE_ADDR'];  
-         }  
-         return $ip;  
-    }  
-    $ip = getIPAddress();  
-    echo $ip;  
-     ?>  	<br>
-	Your location is: Chennai
-	<? php 
-	$url = 'http://www.geoplugin.net/php.gp?ip=45.251.35.83'
-	//$addr= '45.251.35.83';
-	$request_url= $url;
-	$curl = curl_init($request_url);
-	$response = curl_exec($curl);
-    curl_close($curl);
-    echo $response . PHP_EOL;
-	
-	 ?> 	</h1>
+		<div class="header-logo">
+			<a href="index.html">Hi</a>
 
-	 <!--echo var_export(unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=45.251.35.83')))
+			<div class="ip-address">
+				<h1></h1>
+				<h1>Your IP address is : <span id="getIp"></span></h1>
+				<h1>Your location is: <span id="getLocation"></span>
+				</h1>
+
+				<!--echo var_export(unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=45.251.35.83')))
        -->
+			</div>
 		</div>
-	</div> 
 
 		<a id="header-menu-trigger" href="#0">
-		 	<span class="header-menu-text">Menu</span>
-		  	<span class="header-menu-icon"></span>
-		</a> 
+			<span class="header-menu-text">Menu</span>
+			<span class="header-menu-icon"></span>
+		</a>
 
 		<nav id="menu-nav-wrap">
 
-			<a href="#0" class="close-button" title="close"><span>Close</span></a>	
+			<a href="#0" class="close-button" title="close"><span>Close</span></a>
 
-	   	<h3>Welcome</h3>  
+			<h3>Welcome</h3>
 
 			<ul class="nav-list">
 				<li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
@@ -99,103 +74,113 @@
 				<li><a class="smoothscroll" href="#skills" title="">Skills</a></li>
 				<li><a class="smoothscroll" href="#credentials" title="">Experience</a></li>
 				<li><a class="smoothscroll" href="#portfolio" title="">Articles</a></li>
-				<li><a class="smoothscroll" href="#stats" title="">Stats</a></li>				
-				<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>						
-			</ul>	
+				<li><a class="smoothscroll" href="#stats" title="">Stats</a></li>
+				<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
+			</ul>
 
 			<ul class="header-social-list">
-	         <li>
-	         	<a href="https://www.linkedin.com/in/shyam-sujith/"><i class="fa fa-linkedin"></i></a>
-	         </li>
-	         <li>
-	         	<a href="https://www.instagram.com/space_buddhah/"><i class="fa fa-instagram"></i></a>
-	         </li>
-			 <li>
-				<a href="https://twitter.com/sujithshyam"><i class="fa fa-twitter"></i></a>
-			</li>
-	      </ul>		
+				<li>
+					<a href="https://www.linkedin.com/in/shyam-sujith/"><i class="fa fa-linkedin"></i></a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/space_buddhah/"><i class="fa fa-instagram"></i></a>
+				</li>
+				<li>
+					<a href="https://twitter.com/sujithshyam"><i class="fa fa-twitter"></i></a>
+				</li>
+			</ul>
 
-		</nav>  <!-- end #menu-nav-wrap -->
+		</nav> <!-- end #menu-nav-wrap -->
 
-	</header> <!-- end header -->  
+	</header> <!-- end header -->
 
 
-   <!-- home
+	<!-- home
    ================================================== -->
-   <section id="home">
+	<section id="home">
 
-   	<div class="overlay"></div><div class="gradient-overlay"></div>
+		<div class="overlay"></div>
+		<div class="gradient-overlay"></div>
 
-   	<div class="home-content-table">		   
+		<div class="home-content-table">
 
-		   <div class="home-content-tablecell">
-		   	<div class="row">
-		   		<div class="col-twelve">		   			
-			  			<div class="home-bottom-text">
+			<div class="home-content-tablecell">
+				<div class="row">
+					<div class="col-twelve">
+						<div class="home-bottom-text">
 
-			  				<h3 class="animate-intro">Hi</h3>
-				  			<h1 class="animate-intro">
-							I am Shyam Sujith. <br>
-							Security engineer &amp; researcher. <br>
-				  			</h1>	
+							<h3 class="animate-intro">Hi</h3>
+							<h1 class="animate-intro">
+								I am Shyam Sujith. <br>
+								Security engineer &amp; researcher. <br>
+							</h1>
 
 							<ul class="home-section-links">
 								<li class="animate-intro">More <a href="#about" class="smoothscroll">About Me</a></li>
-								<li class="animate-intro">View <a href="#portfolio" class="smoothscroll">My Works</a></li>
-								<li class="animate-intro">Contact <a href="#contact" class="smoothscroll">By Email</a></li>								
+								<li class="animate-intro">View <a href="#portfolio" class="smoothscroll">My Works</a>
+								</li>
+								<li class="animate-intro">Contact <a href="#contact" class="smoothscroll">By Email</a>
+								</li>
 							</ul>
 
-			  			</div> <!-- end home-bottom-text -->
-			   	</div> <!-- end col-twelve --> 
-		   	</div> <!-- end row --> 
-		   </div> <!-- end home-content-tablecell --> 		   
+						</div> <!-- end home-bottom-text -->
+					</div> <!-- end col-twelve -->
+				</div> <!-- end row -->
+			</div> <!-- end home-content-tablecell -->
 		</div> <!-- end home-content-table -->
 
-		<a href="#about" class="scroll-icon smoothscroll">		
-		   <span class="icon-DownArrow"></span>
-		</a>	
-   
-   </section> <!-- end home -->
+		<a href="#about" class="scroll-icon smoothscroll">
+			<span class="icon-DownArrow"></span>
+		</a>
+
+	</section> <!-- end home -->
 
 
-   <!-- about
+	<!-- about
    ================================================== -->
-   <section id="about">
+	<section id="about">
 
-   	<div class="about-profile-bg"></div>
+		<div class="about-profile-bg"></div>
 
-   	<div class="about-wrap">
+		<div class="about-wrap">
 
-   		<div class="about-profile">
+			<div class="about-profile">
 
-   			<div class="about-profile-bg"></div>
+				<div class="about-profile-bg"></div>
 
 				<div class="intro">
 					<h3 class="animate-this">About Me</h3>
-	   			
 
-	   			<p class="lead animate-this">The core value which I place importance upon is the law of equivalent exchange. The more you work, the more abundance you will spawn in life.</p>					
-				</div>   		
 
-   			<p class="animate-this" style="font-color: #000">
-				   Being an inquisitive person, I was drawn to technology. Techonology is like a giant piece of puzzle. The beauty in how everything fits together and works seamlessly boggles my mind.Understanding the nuances of technology gives me immense pleasure. So I was drawn to computer science from a very young age. And thus my journey began. A professor in my college inspired me to get into programming and I was hooked instantenously. 
-   			</p>
+					<p class="lead animate-this">The core value which I place importance upon is the law of equivalent
+						exchange. The more you work, the more abundance you will spawn in life.</p>
+				</div>
 
-   			<p class="animate-this"> But it was only till I learnt about Cyber Security, I found my true calling. Aeons were spent researching about different vulnerabilites, the ways to exploit them and to mitigate them. Time used to flow without an end when I'm immersed in my work. Experimenting with different tools, methods in exploiting is my favorite thing to do. Each bug is unique and each time it requires a different, delicate approach especially when the environment is a production one. It's almost poetic in a unconventional way.</p>
+				<p class="animate-this" style="font-color: #000">
+					Being an inquisitive person, I was drawn to technology. Techonology is like a giant piece of puzzle.
+					The beauty in how everything fits together and works seamlessly boggles my mind.Understanding the
+					nuances of technology gives me immense pleasure. So I was drawn to computer science from a very
+					young age. And thus my journey began. A professor in my college inspired me to get into programming
+					and I was hooked instantenously.
+				</p>
 
-   			<p>
-   				<a href="#contact" class="button full-width animate-this">Contact Me</a>
-   				<a href="#" class="button button-primary full-width animate-this">Download CV</a>
-   			</p>  			
+				<p class="animate-this"> But it was only till I learnt about Cyber Security, I found my true calling.
+					Aeons were spent researching about different vulnerabilites, the ways to exploit them and to
+					mitigate them. Time used to flow without an end when I'm immersed in my work. Experimenting with
+					different tools, methods in exploiting is my favorite thing to do. Each bug is unique and each time
+					it requires a different, delicate approach especially when the environment is a production one. It's
+					almost poetic in a unconventional way.</p>
 
-   		</div> <!-- end about-profile  -->
+				<p>
+					<a href="#contact" class="button full-width animate-this">Contact Me</a>
+					<a href="#" class="button button-primary full-width animate-this">Download CV</a>
+				</p>
 
-   	<div class="about-services">
-		<div class="about-services-bg">
-			<img src="../images/service-bg.jpeg">
-		</div>
+			</div> <!-- end about-profile  -->
 
-		<!-- commenting services since I don't need them now
+			<!-- <div class="about-services"> -->
+
+			<!-- commenting services since I don't need them now
 				<div class="intro">
 	   			<h3 class="animate-this">Services</h3>
 	   			<h1 class="animate-this">What I Do.</h1>
@@ -246,73 +231,74 @@
    				</li>
    			</ul>   			
 		-->
-   		</div> <!-- end about-services  -->   
+			<!-- </div> end about-services     -->
 
-   	</div> <!-- Comment this out as well end about-wrap-->
-   </section> <!--end about -->
+		</div> <!-- Comment this out as well end about-wrap-->
+	</section>
+	<!--end about -->
 
-   <!-- about
+	<!-- about
    ================================================== -->
-   <section id="skills">
+	<section id="skills">
 
-   	<div class="overlay"></div>
-   	<div class="gradient-overlay"></div>
-   	
-   	<div class="row wide">
-   		<div class="col-skills">
+		<div class="overlay"></div>
+		<div class="gradient-overlay"></div>
 
-   			<div class="section-intro">
-   				<h3 class="animate-this">Skillset</h3>
-   			   <h1 class="animate-this">#Self Bragging</h1>
-   			
-   			   <p class="animate-this">Listing the skills confined to the realm</p>
-   			</div>
+		<div class="row wide">
+			<div class="col-skills">
 
-   			<ul class="skill-bars">
-				<li class="animate-this" data-animate="fadeInRight">
-					<div class="progress percent90"><span>90%</span></div>
-					<strong>Web Vulnerability Assessment</strong>
-				</li>
-				<li class="animate-this" data-animate="fadeInRight">
-					<div class="progress percent90"><span>90%</span></div>
-					<strong>Mobile application assessment</strong>
-				</li>
-				<li class="animate-this" data-animate="fadeInRight">
-					<div class="progress percent80"><span>80%</span></div>
-					<strong>API vulnerability assessment</strong>
-				</li>
-				<li class="animate-this" data-animate="fadeInRight">
-				 <div class="progress percent85"><span>85%</span></div>
-				 <strong>Securing Networks</strong>
-				 </li>
-				 <li class="animate-this" data-animate="fadeInRight">
-				 <div class="progress percent85"><span>85%</span></div>
-				 <strong>Python Scripting</strong>
-				 </li>   
-				<li class="animate-this" data-animate="fadeInRight">
-					<div class="progress percent80"><span>80%</span></div>
-					<strong>Linux Adminstration</strong>
-				</li>   
-			 </ul>
-   			
-   		</div> <!-- end col-six -->
-   	</div> <!-- end row wide -->
+				<div class="section-intro">
+					<h3 class="animate-this">Skillset</h3>
+					<h1 class="animate-this">#Self Bragging</h1>
 
-   </section> <!-- end skills -->
+					<p class="animate-this">Listing the skills confined to the realm</p>
+				</div>
+
+				<ul class="skill-bars">
+					<li class="animate-this" data-animate="fadeInRight">
+						<div class="progress percent90"><span>90%</span></div>
+						<strong>Web Vulnerability Assessment</strong>
+					</li>
+					<li class="animate-this" data-animate="fadeInRight">
+						<div class="progress percent90"><span>90%</span></div>
+						<strong>Mobile application assessment</strong>
+					</li>
+					<li class="animate-this" data-animate="fadeInRight">
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>API vulnerability assessment</strong>
+					</li>
+					<li class="animate-this" data-animate="fadeInRight">
+						<div class="progress percent85"><span>85%</span></div>
+						<strong>Securing Networks</strong>
+					</li>
+					<li class="animate-this" data-animate="fadeInRight">
+						<div class="progress percent85"><span>85%</span></div>
+						<strong>Python Scripting</strong>
+					</li>
+					<li class="animate-this" data-animate="fadeInRight">
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>Linux Adminstration</strong>
+					</li>
+				</ul>
+
+			</div> <!-- end col-six -->
+		</div> <!-- end row wide -->
+
+	</section> <!-- end skills -->
 
 
-   <!-- credentials
+	<!-- credentials
    ================================================== -->
-   <section id="credentials">
+	<section id="credentials">
 
-   	<div class="row narrow section-intro with-bottom-sep">
-   		<div class="col-twelve">
-   			<h3 class="animate-this">Career and Education</h3>
-	   		<h1 class="animate-this">More of My Credentials.</h1>  			
-	   		
-	   		<p class="lead"></p>	   			
-   		</div>   		
-   	</div> <!-- end section-intro -->
+		<div class="row narrow section-intro with-bottom-sep">
+			<div class="col-twelve">
+				<h3 class="animate-this">Career and Education</h3>
+				<h1 class="animate-this">More of My Credentials.</h1>
+
+				<p class="lead"></p>
+			</div>
+		</div> <!-- end section-intro -->
 
 		<div class="row wide credentials-content">
 
@@ -320,45 +306,45 @@
 
 				<h2 class="animate-this">Experience</h2>
 
-	   		<div class="timeline-wrap">
+				<div class="timeline-wrap">
 
-   				<div class="timeline-block animate-this">
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
-	   				</div>
-	   				<div class="timeline-header">
-	   					<p class="timeframe">November 2020 - Present</p>
-	   					<h3>Castellum Labs</h3>
-	   					<h4>Security Engineer</h4>	   					
-	   				</div>
-	   				<div class="timeline-content">	   					
-	   					<h>Responsibilites include:
-						<li>Vulnerability assessment.</li>
-						<li>Cyber Risk and auditing.</li>
-						<li>Designing frameworks for testing.</li>
-						<li>Conducting interviews.</li>
-						</h>
-	   				</div>
-	   			</div> <!-- end timeline-block -->
+					<div class="timeline-block animate-this">
+						<div class="timeline-ico">
+							<i class="fa fa-briefcase"></i>
+						</div>
+						<div class="timeline-header">
+							<p class="timeframe">November 2020 - Present</p>
+							<h3>Castellum Labs</h3>
+							<h4>Security Engineer</h4>
+						</div>
+						<div class="timeline-content">
+							<h>Responsibilites include:
+								<li>Vulnerability assessment.</li>
+								<li>Cyber Risk and auditing.</li>
+								<li>Designing frameworks for testing.</li>
+								<li>Conducting interviews.</li>
+							</h>
+						</div>
+					</div> <!-- end timeline-block -->
 
-	   			<div class="timeline-block animate-this">
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
-	   				</div>
-	   				<div class="timeline-header">
-	   					<p class="timeframe">June 2017 - October 2020</p>
-	   					<h3>Capgemini</h3>
-	   					<h4>Senior Analyst</h4>	   				
-	   				</div>
-	   				<div class="timeline-desc">	   					
-						<h>Responsibilites include:
-							<li>Network assessment &amp monitoring</li>
-							<li>Firewall configuration and management</li>
-							<li>Working with ETL frameworks</li>
-						</h>	   				
-					</div>
-	   			</div> <!-- end timeline-block -->
-<!-- Commenting out
+					<div class="timeline-block animate-this">
+						<div class="timeline-ico">
+							<i class="fa fa-briefcase"></i>
+						</div>
+						<div class="timeline-header">
+							<p class="timeframe">June 2017 - October 2020</p>
+							<h3>Capgemini</h3>
+							<h4>Senior Analyst</h4>
+						</div>
+						<div class="timeline-desc">
+							<h>Responsibilites include:
+								<li>Network assessment &amp monitoring</li>
+								<li>Firewall configuration and management</li>
+								<li>Working with ETL frameworks</li>
+							</h>
+						</div>
+					</div> <!-- end timeline-block -->
+					<!-- Commenting out
 	   			<div class="timeline-block animate-this">
 	   				<div class="timeline-ico">
 	   					<i class="fa fa-briefcase"></i>
@@ -373,44 +359,45 @@
 	   				</div>
 	   			</div> < end timeline-block -->
 
-   			</div> <!-- end timeline-wrap -->				
-   		
-	   	</div> <!-- end col-six -->
+				</div> <!-- end timeline-wrap -->
 
-	   	<div class="col-six tab-full right">
+			</div> <!-- end col-six -->
 
-	   		<h2 class="animate-this">Education</h2>
+			<div class="col-six tab-full right">
+
+				<h2 class="animate-this">Education</h2>
 
 				<div class="timeline-wrap">
 
-   				<div class="timeline-block animate-this">
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-	   				<div class="timeline-header">
-	   					<p class="timeframe">2021 - 2022</p>
-	   					<h3>University<h3>
-	   					<h4>Master of Science in Cyber Security Engineering</h4>	   					
-	   				</div>
-	   				<div class="timeline-content">	   					
-	   					<p>Specialisation in cyber security with an holistic approach and encompassing various attributes of security.</p>
-	   				</div>
-	   			</div> <!-- end timeline-block -->
+					<div class="timeline-block animate-this">
+						<div class="timeline-ico">
+							<i class="fa fa-graduation-cap"></i>
+						</div>
+						<div class="timeline-header">
+							<p class="timeframe">2021 - 2022</p>
+							<h3>University<h3>
+									<h4>Master of Science in Cyber Security Engineering</h4>
+						</div>
+						<div class="timeline-content">
+							<p>Specialisation in cyber security with an holistic approach and encompassing various
+								attributes of security.</p>
+						</div>
+					</div> <!-- end timeline-block -->
 
-	   			<div class="timeline-block animate-this">
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-	   				<div class="timeline-header">
-	   					<p class="timeframe">September 2013 - May 2017</p>
-	   					<h3>Anna University</h3>
-	   					<h4>Bachelor of Engineering in Computer Science</h4>	   				
-	   				</div>
-	   				<div class="timeline-desc">	   					
-	   					<p>Foundational course for every element in computer science </p>
-	   				</div>
-	   			</div> <!-- end timeline-block -->
-				<!--
+					<div class="timeline-block animate-this">
+						<div class="timeline-ico">
+							<i class="fa fa-graduation-cap"></i>
+						</div>
+						<div class="timeline-header">
+							<p class="timeframe">September 2013 - May 2017</p>
+							<h3>Anna University</h3>
+							<h4>Bachelor of Engineering in Computer Science</h4>
+						</div>
+						<div class="timeline-desc">
+							<p>Foundational course for every element in computer science </p>
+						</div>
+					</div> <!-- end timeline-block -->
+					<!--
 	   			<div class="timeline-block animate-this">
 	   				<div class="timeline-ico">
 	   					<i class="fa fa-graduation-cap"></i>
@@ -427,56 +414,58 @@
 
 	   			</div> < end timeline-block -->
 
-   			</div> <!-- end timeline-wrap -->	   		
-	   		
-	   	</div> <!-- end col-six --> 
-		   
-		    <div class="col-full tab-full right" style="
+				</div> <!-- end timeline-wrap -->
+
+			</div> <!-- end col-six -->
+
+			<div class="col-full tab-full right" style="
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: flex-start;
 			">
 
-			<h2 class="animate-this">Certification</h2>
+				<h2 class="animate-this">Certification</h2>
 
-			 <div class="timeline-wrap">
+				<div class="timeline-wrap">
 
-				<div class="timeline-block animate-this">
-					<div class="timeline-ico">
-						<i class="fa fa-certificate"></i>
-					</div>
-					<div class="timeline-header">
-						<p class="timeframe" style=font-size:larger>September 2020</p>
-						<h1>Certified Ethical Hacker</h1>
-						<h3><i class="fa fa-institution"> EC Council </i> </h3>
-					</div>
-					<div class="timeline-header">
-						<br>
-						<p class="timeframe" style=font-size:larger>November 2020</p>
-						<h1>IT Automation with Python</h1>
-						<h3><i class="fa fa-institution"> Google </i> </h3>
-					</div>
-				
-			</div> <!-- End of certificate-->
+					<div class="timeline-block animate-this">
+						<div class="timeline-ico">
+							<i class="fa fa-certificate"></i>
+						</div>
+						<div class="timeline-header">
+							<p class="timeframe" style=font-size:larger>September 2020</p>
+							<h1>Certified Ethical Hacker</h1>
+							<h3><i class="fa fa-institution"> EC Council </i> </h3>
+						</div>
+						<div class="timeline-header">
+							<br>
+							<p class="timeframe" style=font-size:larger>November 2020</p>
+							<h1>IT Automation with Python</h1>
+							<h3><i class="fa fa-institution"> Google </i> </h3>
+						</div>
 
-		</div> <!-- end row wide -->    	  	
+					</div> <!-- End of certificate-->
 
-   </section> <!-- end credentials -->
-   
-<!-- commenting out the entire portfolio section-->
+				</div> <!-- end row wide -->
+
+	</section> <!-- end credentials -->
+
+	<!-- commenting out the entire portfolio section-->
 	<!-- portfolio
    ================================================== -->
-   <section id="portfolio">
+	<section id="portfolio">
 
-   	<div class="row narrow section-intro with-bottom-sep">
-   		<div class="col-twelve">
-   			<h3 class="animate-this">Articles</h3>
-	   		<h1 class="animate-this">See the articles I write</h1>  			
-	   		
-	   		<p class="lead animate-this">The goal is to fill this space with articles including but not limited to technology</p>	   			
-   		</div>   		
-   	</div> <!-- end row section-intro
+		<div class="row narrow section-intro with-bottom-sep">
+			<div class="col-twelve">
+				<h3 class="animate-this">Articles</h3>
+				<h1 class="animate-this">See the articles I write</h1>
+
+				<p class="lead animate-this">The goal is to fill this space with articles including but not limited to
+					technology</p>
+			</div>
+		</div>
+		<!-- end row section-intro
 
    	<div class="row portfolio-content">
    		<div class="col-twelve">
@@ -621,76 +610,76 @@
    </section>  <!-- end portfolio -->
 
 
-	<!-- stats
+		<!-- stats
    ================================================== -->
-   <section id="stats">
+		<section id="stats">
 
-		<div class="row">
-			<div class="col-twelve">
-				<div class="block-1-4 block-tab-1-2 block-mob-full stats-list">
+			<div class="row">
+				<div class="col-twelve">
+					<div class="block-1-4 block-tab-1-2 block-mob-full stats-list">
 
-					<div class="bgrid stat">
-						<div class="icon-part">
-							<i class="fa fa-windows"></i>
-						</div>
-						<h5 class="stat-title">
-							Applications Tested
-						</h5>
-						<h3 class="stat-count">60</h3>
-					</div> <!-- end stat -->					
+						<div class="bgrid stat">
+							<div class="icon-part">
+								<i class="fa fa-windows"></i>
+							</div>
+							<h5 class="stat-title">
+								Applications Tested
+							</h5>
+							<h3 class="stat-count">60</h3>
+						</div> <!-- end stat -->
 
-					<div class="bgrid stat">
-						<div class="icon-part">
-							<i class="fa fa-bug"></i>
-						</div>
-						<h5 class="stat-title">
-							Vulnerabilites Found
-						</h5>
-						<h3 class="stat-count">220</h3>
-					</div> <!-- end stat -->
+						<div class="bgrid stat">
+							<div class="icon-part">
+								<i class="fa fa-bug"></i>
+							</div>
+							<h5 class="stat-title">
+								Vulnerabilites Found
+							</h5>
+							<h3 class="stat-count">220</h3>
+						</div> <!-- end stat -->
 
-					<div class="bgrid stat">
-						<div class="icon-part">
-							<i class="fa fa-code"></i>
-						</div>
-						<h5 class="stat-title">
-							CTF's pwned
-						</h5>
-						<h3 class="stat-count">100</h3>
-					</div> <!-- end stat -->									
+						<div class="bgrid stat">
+							<div class="icon-part">
+								<i class="fa fa-code"></i>
+							</div>
+							<h5 class="stat-title">
+								CTF's pwned
+							</h5>
+							<h3 class="stat-count">100</h3>
+						</div> <!-- end stat -->
 
-					<div class="bgrid stat">
-						<div class="icon-part">
-							<i class="icon-Idea"></i>
-						</div>
-						<h5 class="stat-title">
-							Crazy Ideas
-						</h5>
-						<h3 class="stat-count">120</h3>
-					</div> <!-- end stat -->
-					
-				</div> <!-- end stats-list -->
-			</div> <!-- end col-twelve -->
-		</div> <!-- end row -->
+						<div class="bgrid stat">
+							<div class="icon-part">
+								<i class="icon-Idea"></i>
+							</div>
+							<h5 class="stat-title">
+								Crazy Ideas
+							</h5>
+							<h3 class="stat-count">120</h3>
+						</div> <!-- end stat -->
 
-   </section> <!-- end stats -->
+					</div> <!-- end stats-list -->
+				</div> <!-- end col-twelve -->
+			</div> <!-- end row -->
+
+		</section> <!-- end stats -->
 
 
-	<!-- contact
+		<!-- contact
    ================================================== -->
-   <section id="contact">
+		<section id="contact">
 
-      <div class="overlay"></div>
+			<div class="overlay"></div>
 
-		<div class="row narrow section-intro">
-   		<div class="col-twelve">
-   			<h3 class="animate-this">Contact</h3>
-   			<h1 class="animate-this">Feel free to get in touch with me</h1>
+			<div class="row narrow section-intro">
+				<div class="col-twelve">
+					<h3 class="animate-this">Contact</h3>
+					<h1 class="animate-this">Feel free to get in touch with me</h1>
 
-   			<p class="lead animate-this">Anything with regards to security I'm available.</p>
-   		</div> 
-   	</div> <!-- end section-intro -->
-<!--
+					<p class="lead animate-this">Anything with regards to security I'm available.</p>
+				</div>
+			</div> <!-- end section-intro -->
+			<!--
    	<div class="row contact-form">
    		<div class="col-twelve">
 
@@ -738,74 +727,82 @@
          </div> <!-- end col-twelve    		
    	</div> <!-- end row contact-form -->
 
-   	<div class="row contact-info">
+			<div class="row contact-info">
 
-   		<div class="col-four tab-full">
-   			<h5 class="animate-this">Where to find me</h5>
+				<div class="col-four tab-full">
+					<h5 class="animate-this">Where to find me</h5>
 
-   			<p class="animate-this">
-            127.0.0.1<br>
-			Your address should not be public.
-            </p>
-   		</div> <!-- end col-four -->
+					<p class="animate-this">
+						127.0.0.1<br>
+						Your address should not be public.
+					</p>
+				</div> <!-- end col-four -->
 
-   		<div class="col-four tab-full collapse">
-   			<h5 class="animate-this">Email Me At</h5>
+				<div class="col-four tab-full collapse">
+					<h5 class="animate-this">Email Me At</h5>
 
-   			<p class="animate-this">
-   				mshyamsujith@gmail.com<br>
-			   	mshyamsujith2@gmail.com			     
-			   </p>
-   		</div> <!-- end col-four -->
+					<p class="animate-this">
+						mshyamsujith@gmail.com<br>
+						mshyamsujith2@gmail.com
+					</p>
+				</div> <!-- end col-four -->
 
-   		<div class="col-four tab-full">
-   			<h5 class="animate-this">Call Me At</h5>
+				<div class="col-four tab-full">
+					<h5 class="animate-this">Call Me At</h5>
 
-   			<p class="animate-this">
-   				Do not make your phone details public.<br>
-			   </p>
-   		</div> <!-- end col-four -->
-   		
-   	</div> <!-- end row contact-info -->
-		
-	</section> <!-- end contact -->
+					<p class="animate-this">
+						Do not make your phone details public.<br>
+					</p>
+				</div> <!-- end col-four -->
+
+			</div> <!-- end row contact-info -->
+
+		</section> <!-- end contact -->
 
 
-	<!-- footer
+		<!-- footer
    ================================================== -->
-	<footer>
-     	<div class="row">
+		<footer>
+			<div class="row">
 
-     		<div class="col-twelve tab-full social">
-     			<ul class="footer-social">        
-			      <li><a href="https://www.linkedin.com/in/shyam-sujith">Linkedin</a></li>
-			      <li><a href="https://twitter.com/sujithshyam">Twitter</a></li>
-			      <li><a href=" https://www.instagram.com/space_buddhah">Instagram</a></li>
-			   </ul> 	      		
-	      </div>
+				<div class="col-twelve tab-full social">
+					<ul class="footer-social">
+						<li><a href="https://www.linkedin.com/in/shyam-sujith">Linkedin</a></li>
+						<li><a href="https://twitter.com/sujithshyam">Twitter</a></li>
+						<li><a href=" https://www.instagram.com/space_buddhah">Instagram</a></li>
+					</ul>
+				</div>
 
-      	<div class="col-twelve tab-full">
-	      	<div class="copyright">
-		        	<span>© Copyright to Sujith 2021.</span> 		        	         	
-		      </div>		                  
-	      </div>      	
+				<div class="col-twelve tab-full">
+					<div class="copyright">
+						<span>© Copyright to Sujith 2021.</span>
+					</div>
+				</div>
 
-      </div> <!-- end row -->
+			</div> <!-- end row -->
 
-      <div id="go-top">
-		   <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-UpArrow"></i></a>
-		</div>		
-   </footer>
+			<div id="go-top">
+				<a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-UpArrow"></i></a>
+			</div>
+		</footer>
 
-   <div id="preloader"> 
-    	<div id="loader"></div>
-   </div> 
+		<div id="preloader">
+			<div id="loader"></div>
+		</div>
 
-   <!-- Java Script
-   ================================================== --> 
-   <script src="js/jquery-2.1.3.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
+		<!-- Java Script
+   ================================================== -->
+		<script src="js/jquery-2.1.3.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			fetch("http://www.geoplugin.net/json.gp")
+				.then(res => res.json())
+				.then(data => {
+					document.getElementById("getIp").innerText = data.geoplugin_request || "Hidden";
+					document.getElementById("getLocation").innerText = data.geoplugin_region || "Hidden";
+				})
+		</script>
 
 </body>
 

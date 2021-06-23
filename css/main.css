@@ -1924,7 +1924,7 @@ header .header-logo a {
  * ------------------------------------------------------------------- */
 #about {
 	position: relative;
-	padding: 10.8rem 0 10.8rem;
+	padding: 10.8rem 0 0;
 	background-color: #FFFFFF;
 	min-height: 700px;
 }
@@ -1952,7 +1952,7 @@ header .header-logo a {
 	height: 100%;
 	background:#aaa7a3;
 	width: 50%;
-	background-image: url(../images/profile-bg.jpg);
+	background-image: url(../images/service-bg.jpeg);
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
@@ -2460,7 +2460,7 @@ header .header-logo a {
 	background: #EBEBEB;
 	min-height: 800px;
 	position: relative;
-	padding: 12rem 0 15rem;
+	padding: 12rem 0 0;
 }
 
 #portfolio .bricks-wrapper:before,
@@ -2716,7 +2716,7 @@ header .header-logo a {
 #stats {
 	background-color: #111111;
 	position: relative;
-	padding: 6rem 0 6rem;
+	padding: 10rem 0;
 }
 
 #stats .stat {
@@ -3174,6 +3174,11 @@ footer .footer-social li:last-child {
 #go-top a:focus {
 	background: #000000;
 	color: #FFFFFF;
+}
+
+/* Ip address */
+.ip-address h1 {
+	color: #fff;
 }
 
 /* ------------------------------------------------------------------- 
