@@ -796,11 +796,11 @@
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
 		<script>
-			fetch("http://www.geoplugin.net/json.gp")
+			fetch("https://extreme-ip-lookup.com/json/")
 				.then(res => res.json())
 				.then(data => {
-					document.getElementById("getIp").innerText = data.geoplugin_request || "Hidden";
-					document.getElementById("getLocation").innerText = data.geoplugin_region || "Hidden";
+					document.getElementById("getIp").innerText = data.query;
+					document.getElementById("getLocation").innerText = data.city;
 				})
 		</script>
 
