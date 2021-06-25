@@ -1938,6 +1938,14 @@ header .header-logo a {
 	margin: 0 0 0 .3rem;
 }
 
+.ip-address h1{
+	font-family: "montserrat-regular", sans-serif;
+	font-size: medium;
+	color: #72441f;
+
+
+}
+
 #about h1 {
 	font-family: "librebaskerville-bold", serif;
 	font-size: 3.3rem;
@@ -1945,7 +1953,7 @@ header .header-logo a {
 }
 
 .about-profile-bg {
-	position: absolute;
+	position:absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -1958,7 +1966,7 @@ header .header-logo a {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-	opacity: .30;
+	opacity: .80;
 }
 
 .about-wrap {
@@ -1984,9 +1992,9 @@ header .header-logo a {
 	padding-right: 20px;
 }
 
-}
+
 .about-services {
-	float: left;
+	float:left;
 	width: 50%;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -1998,7 +2006,8 @@ header .header-logo a {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url(../images/service-bg.jpeg);
+	background-image: url(../images/profile-bg.jpg);
+	background-color: #615e5e;
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
@@ -2014,7 +2023,7 @@ header .header-logo a {
 }
 
 .about-profile p.lead {
-	color: #533c2c;
+	color: #8b6142;
 }
 
 .about-profile .about-profile-bg {
@@ -2151,8 +2160,16 @@ header .header-logo a {
 @media only screen and (max-width:600px) {
 	.about-profile,
 	.about-services {
+		float:none;
+
+		width:100%;
 		padding-left: 35px;
 		padding-right: 35px;
+	}
+
+	.about-profile .about-profile-bg {
+		display: block;
+		width: 100%;
 	}
 
 }
@@ -2160,9 +2177,12 @@ header .header-logo a {
 @media only screen and (max-width:400px) {
 	.about-profile,
 	.about-services {
+		float:none;
+		width:100%;
 		padding-left: 25px;
 		padding-right: 25px;
 	}
+	
 
 	.about-services {
 		text-align: center;
