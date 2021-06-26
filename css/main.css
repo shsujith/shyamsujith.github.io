@@ -1966,7 +1966,7 @@ header .header-logo a {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-	opacity: 1;
+	opacity: .5;
 }
 
 .about-wrap {
